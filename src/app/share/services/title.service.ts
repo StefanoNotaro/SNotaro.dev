@@ -7,7 +7,7 @@ import { filter } from 'rxjs';
   providedIn: 'root'
 })
 export class TitleService {
-  private suffix: string = ' | Portfolio';
+  private suffix = ' | Portfolio';
 
   constructor(
     private router: Router,
