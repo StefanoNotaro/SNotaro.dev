@@ -13,6 +13,9 @@ export class TitleService {
     private router: Router,
     private title: Title
   ){
+  }
+
+  public subscribe(): void {
     this.router.events
     .pipe( filter(event => event instanceof NavigationEnd) )
     .subscribe(x => {
