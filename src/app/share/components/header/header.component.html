@@ -1,8 +1,19 @@
 <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex flex-column">
-        <h1>Stefano Notaro</h1>
-        <h3>Fullstack Developer {{environment.production}}</h3>
+    <div class="d-flex align-items-center gap-5">
+        <div class="d-flex flex-column">
+            <h1>Stefano Notaro</h1>
+            <h3>Fullstack Developer</h3>
+        </div>
+        <div>
+            <a [href]="environment.linkedinHref" role="button" target="_blank" (mouseenter)="onLinkedinHover(true)" (mouseleave)="onLinkedinHover(false)">
+                <fa-icon #linkedinIcon [icon]="faIcons.socialMedia.linkedin" [classes]="['fa-2x', linkedinHover ? 'fa-beat-fade' : '']">
+                </fa-icon>
+            </a>
+        </div>
     </div>
 
-    <a [href]="'mailto: ' + environment.personalEmail" class="btn btn-success">Contact Me</a>
+    <a [href]="'mailto: ' + environment.personalEmail" role="button" class="btn btn-success">
+        <fa-icon [icon]="faIcons.paperPlane"></fa-icon>
+        Contact Me
+    </a>
 </div>
