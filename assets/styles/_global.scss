@@ -1,6 +1,14 @@
+html {
+  font-size: 15px;
+}
+
 html,
 body {
   height: 100%;
   background-color: var(--app-background);
   color: aliceblue;
+}
+
+a[role=button] {
+  color: inherit;
 }
