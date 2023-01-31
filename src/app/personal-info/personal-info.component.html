@@ -1,0 +1,31 @@
+<h2 class="sr-only">Basic Information</h2>
+<ul class="list-group list-unstyled gap-2">
+    <li class="d-flex gap-2">
+        <fa-icon [icon]="faIcons.location"></fa-icon>
+        <span class="sr-only">Location:</span>
+        <a href="https://goo.gl/maps/a7kQdeoqcrV8uysR9" target="_blank" class="text-decoration-none">
+            Barcelona, Barcelona, Spain
+        </a>
+    </li>
+    <li class="d-flex gap-2">
+        <fa-icon [icon]="faIcons.email"></fa-icon>
+        <span class="sr-only">Email:</span>
+        <a [href]="'mailto: ' + environment.personalEmail + '?subject=Reaching out from portfolio'" target="_self" class="text-decoration-none">
+            {{ environment.personalEmailDisplay }}
+        </a>
+    </li>
+    <li class="d-flex gap-2">
+        <fa-icon [icon]="faIcons.link"></fa-icon>
+        <span class="sr-only">Site:</span>
+        <a [href]="pageBaseUrl" target="_self" class="text-decoration-none">
+            {{ pageBaseUrl }}
+        </a>
+    </li>
+    <li class="d-flex gap-2">
+        <fa-icon [icon]="faIcons.linkedin"></fa-icon>
+        <span class="sr-only">Linkedin:</span>
+        <a [href]="environment.linkedinHref" target="_self" class="text-decoration-none">
+            Stefano Notaro Francesco | Linkedin
+        </a>
+    </li>
+</ul>

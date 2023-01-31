@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    background-color: var(--secondary-background);
+    padding: 2rem;
+}
+
+ul {
+    fa-icon {
+        height: 22.5px;
+        width: 22.5px;
+        text-align: center;
+    }
+
+    a {
+        opacity: .85;
+    }
+}
