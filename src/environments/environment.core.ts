@@ -1,3 +1,4 @@
 export const coreEnvironment = {
-    personalEmail: 'stefano.notaro@gmail.com'
+    personalEmail: 'stefano.notaro@gmail.com',
+    linkedinHref: 'https://www.linkedin.com/in/stefano-notaro-francesco-gauthier',
 }
