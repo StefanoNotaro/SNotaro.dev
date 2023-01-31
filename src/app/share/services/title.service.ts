@@ -18,8 +18,7 @@ export class TitleService {
   public subscribe(): void {
     this.router.events
     .pipe( filter(event => event instanceof NavigationEnd) )
-    .subscribe(x => {
-      console.log(x);
+    .subscribe(() => {
       this.title.setTitle(`Stefano Notaro${this.suffix}`);
     });
   }
