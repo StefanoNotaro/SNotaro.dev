@@ -1,8 +1,6 @@
 :host {
     --container-text-align: center;
 
-    --image-size: 200px;
-    --image-align: center;
     --image-margin-left: auto;
     --image-margin-right: auto;
     --image-float: none;
@@ -26,14 +24,9 @@
 
 .profile {
     &-image {
-        float: var(--image-float);
-        height: var(--image-size);
-        width: var(--image-size);
-        background-color: gray;
-        border-radius: 50%;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        float: var(--image-float);
+        border-radius: 50%;
         margin-left: var(--image-margin-left);
         margin-right: var(--image-margin-right);
     }
@@ -77,15 +70,9 @@
 
 @media (min-width: 992px) {
     :host {
-        // --container-text-align: start;
         --image-margin-right: 2rem;
         --image-float: left;
         --content-main-heading-margin-top: 2rem;
         --contact-me-margin-top: 54.24px;
-        // --content-justify-content: start;
-        // --content-float: left;
-        // --contact-me-float: right;
-        // --contact-me-margin-top: 39.24px;
-        // --content-list-margin-bottom: 0;
     }
 }

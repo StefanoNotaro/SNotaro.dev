@@ -1,28 +1,38 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { environment } from '../../../../environments/environment';
-import { FaIconComponent, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ CommonModule, FontAwesomeModule ],
+  imports: [ CommonModule, FontAwesomeModule, NgOptimizedImage ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   public environment = environment;
 
-  public linkedinHover = false;
-  public githubHover = false;
-
   public faIcons = {
     paperPlane: faPaperPlane,
-    socialMedia: {
-      linkedin: faLinkedin,
-      github: faGithub
-    },
-  }
+    socialMedia: [
+      {
+        icon: faLinkedin,
+        href: environment.linkedinHref,
+        hover: false,
+      },
+      {
+        icon: faGithub,
+        href: environment.githubHref,
+        hover: false,
+      },
+      {
+        icon: faWhatsapp,
+        href: environment.whatsappHref,
+        hover: false,
+      },
+    ]
+  };
 }
