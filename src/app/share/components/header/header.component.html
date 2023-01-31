@@ -1,7 +1,7 @@
-<div class="container d-flex align-items-center justify-content-between">
+<!-- <div class="container d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center gap-5">
         <div class="d-flex flex-column">
-            <h1>Stefano Notaro</h1>
+            <h1>Stefano Notaro Francesco</h1>
             <h3>Fullstack Developer</h3>
         </div>
         <div>
@@ -13,6 +13,39 @@
     </div>
 
     <a [href]="'mailto: ' + environment.personalEmail" role="button" class="btn btn-success">
+        <fa-icon [icon]="faIcons.paperPlane"></fa-icon>
+        Contact Me
+    </a>
+</div> -->
+
+<div class="container clearfix">
+    <span  class="profile-image">
+        IMAGE HERE
+    </span>
+    <div class="profile-content">
+        <h1>Stefano Notaro Francesco</h1>
+        <h3>Fullstack Developer</h3>
+        <ul class="list-group list-group-numbered list-group-horizontal gap-3">
+            <li>
+                <a [href]="environment.linkedinHref" role="button" target="_blank"
+                    (mouseenter)="linkedinHover = true" (mouseleave)="linkedinHover = false">
+                    <fa-icon #linkedinIcon [icon]="faIcons.socialMedia.linkedin"
+                        [classes]="['fa-2x', linkedinHover ? 'fa-beat-fade' : '']">
+                    </fa-icon>
+                </a>
+            </li>
+            <li>
+                <a [href]="environment.githubHref" role="button" target="_blank" (mouseenter)="githubHover = true"
+                    (mouseleave)="githubHover = false">
+                    <fa-icon #linkedinIcon [icon]="faIcons.socialMedia.github"
+                        [classes]="['fa-2x', githubHover ? 'fa-beat-fade' : '']">
+                    </fa-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <a [href]="'mailto: ' + environment.personalEmail" role="button" class="btn btn-success profile-contact-me">
         <fa-icon [icon]="faIcons.paperPlane"></fa-icon>
         Contact Me
     </a>
