@@ -1,5 +1,26 @@
 :root {
-    --app-background: black;
-    --secondary-background: #1c1c1c;
-    --heading-color: #a6c0d4;
+    --gray-50: #f7f7f7;
+    --gray-100: #eeeeee;
+    --gray-200: #e2e2e2;
+    --gray-300: #d0d0d0;
+    --gray-400: #ababab;
+    --gray-500: #8a8a8a;
+    --gray-600: #636363;
+    --gray-700: #505050;
+    --gray-800: #323232;
+    --gray-900: #121212;
+
+    --app-background: var(--gray-900);
+    --app-surface: #242424;
+
+    --accent-50: #ede8fa;
+    --accent-100: #d0c6f1;
+    --accent-200: #b1a1e9;
+    --accent-300: #907ae2;
+    --accent-400: #755ddb;
+    --accent-500: #5941d4;
+    --accent-600: #4d3ccd;
+    --accent-700: #3c34c4;
+    --accent-800: #282fbd;
+    --accent-900: #0023b1;
 }
