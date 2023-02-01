@@ -1,0 +1,15 @@
+ul.list-horizontal {
+    list-style-type: none;
+    display: flex;
+
+    &>li {
+        &::before {
+            content: '•';
+            margin: 0 .5rem;
+        }
+
+        &:first-child::before {
+            display: none;
+        }
+    }
+}
