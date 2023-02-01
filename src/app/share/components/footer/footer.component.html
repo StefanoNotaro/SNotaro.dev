@@ -1,3 +1,9 @@
 <footer class="d-flex align-items-center justify-content-center">
-    <span>Design by Stefano Notaro.</span>
+    <ul class="list-horizontal">
+        <li>{{ currentYear }}</li>
+        <li>Design by Stefano Notaro</li>
+        <li>
+            <a [href]="environment.githubProjectHref" class="text-decoration-none">Source</a>
+        </li>
+    </ul>
 </footer>

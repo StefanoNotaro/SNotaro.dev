@@ -1,3 +1,5 @@
+@import './bootstrap';
+
 html {
   font-size: 15px;
 }
@@ -6,11 +8,7 @@ html,
 body {
   height: 100%;
   background-color: var(--app-background);
-  color: aliceblue;
-}
-
-a[role=button] {
-  color: inherit;
+  color: var(--gray-100);
 }
 
 h1,
@@ -19,5 +17,17 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color)
+  color: var(--accent-100)
+}
+
+a {
+  color: var(--accent-200);
+  
+  &:hover {
+    color: var(--accent-300);
+  }
+
+  &[role=button] {
+    color: inherit;
+  }
 }
