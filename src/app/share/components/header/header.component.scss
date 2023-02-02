@@ -4,6 +4,7 @@
     --image-margin-left: auto;
     --image-margin-right: auto;
     --image-float: none;
+    --image-size: 200px;
 
     --content-justify-content: center;
     --content-float: none;
@@ -13,13 +14,26 @@
 
     --contact-me-float: none;
     --contact-me-margin-top: 0;
-
-    background-color: var(--app-surface);
-    padding: 30px 0;
 }
 
-.container {
+.header {
     text-align: var(--container-text-align);
+
+    background-color: var(--app-surface);
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    &-min {
+        --image-size: 50px;
+        --contact-me-margin-top: 0;
+
+        padding: .75rem 0;
+        height: 75px;
+    }
 }
 
 .profile {
@@ -29,6 +43,8 @@
         border-radius: 50%;
         margin-left: var(--image-margin-left);
         margin-right: var(--image-margin-right);
+        height: var(--image-size);
+        width: var(--image-size);
     }
 
     &-content {
@@ -62,8 +78,8 @@
         --content-justify-content: start;
         --content-float: left;
         --contact-me-float: right;
-        --contact-me-margin-top: 39.24px;
         --content-list-margin-bottom: 0;
+        --contact-me-margin-top: 39.24px;
     }
 }
 

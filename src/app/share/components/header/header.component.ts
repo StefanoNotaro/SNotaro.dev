@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { environment } from '../../../../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -8,12 +8,18 @@ import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-i
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ CommonModule, FontAwesomeModule, NgOptimizedImage ],
+  imports: [CommonModule, FontAwesomeModule, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterContentChecked {
   public environment = environment;
+  public minHeader = false;
+  private currentHeaderHeight = 0;
+
+  @Output() heightChanged = new EventEmitter<number>();
+
+  @ViewChild('header', { static: true }) headerRef!: ElementRef<HTMLDivElement>;
 
   public faIcons = {
     paperPlane: faPaperPlane,
@@ -35,4 +41,25 @@ export class HeaderComponent {
       },
     ]
   };
+
+  constructor(
+    private changeDetectorRef: ChangeDetectorRef
+  ) { }
+  
+  public ngAfterContentChecked(): void {
+    if (this.currentHeaderHeight !== this.headerRef.nativeElement.getBoundingClientRect().height) {
+      this.currentHeaderHeight = this.headerRef.nativeElement.getBoundingClientRect().height;
+      this.heightChanged.emit(this.currentHeaderHeight);
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  public handleScroll() {
+    const previousValue = this.minHeader;
+    this.minHeader = window.scrollY > 100;
+
+    if (previousValue !== this.minHeader) {
+      this.changeDetectorRef.detectChanges();
+    }
+  }
 }
