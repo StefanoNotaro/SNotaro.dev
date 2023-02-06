@@ -1,10 +1,13 @@
 <div #header class="header" [ngClass]="{ 'header-min': minHeader }">
     <div class="container clearfix" [ngClass]="{ 'd-flex align-items-center': minHeader }">
-        <img src="/assets/profile-photo.jpg" alt="Profile picture" class="profile-image" [ngClass]="{ 'profile-image-min': minHeader }"
-            priority>
+        <a href="/">
+            <img src="/assets/profile-photo.jpg" alt="Profile picture" class="profile-image"
+                [ngClass]="{ 'profile-image-min': minHeader }" priority>
+        </a>
+        <h3 *ngIf="minHeader" class="m-0 me-4 text-truncate">Stefano Notaro Francesco</h3>
         <div class="profile-content" [ngClass]="{ 'ms-auto profile-content-min': minHeader }">
-            <h1 [ngClass]="{ 'd-none': minHeader }">Stefano Notaro Francesco</h1>
-            <h3 [ngClass]="{ 'd-none': minHeader }">Fullstack Developer</h3>
+            <h1 [ngClass]="{ 'sr-only': minHeader }">Stefano Notaro Francesco</h1>
+            <h3 [ngClass]="{ 'sr-only': minHeader }">Fullstack Developer</h3>
             <ul class="list-group list-group-numbered list-group-horizontal gap-3">
                 <li *ngFor="let icon of faIcons.socialMedia">
                     <a [href]="icon.href" role="button" target="_blank" (mouseenter)="icon.hover = true"
@@ -15,11 +18,11 @@
                 </li>
             </ul>
         </div>
-    
+
         <a [href]="'mailto: ' + environment.personalEmail + '?subject=Reaching out from portfolio'" role="button"
             class="btn btn-primary fw-semibold profile-contact-me" [ngClass]="{ 'ms-4': minHeader }">
             <fa-icon [icon]="faIcons.paperPlane"></fa-icon>
-            <span [ngClass]="{ 'd-none': minHeader }">
+            <span [ngClass]="{ 'sr-only': minHeader }">
                 {{ 'Contact Me' | uppercase }}
             </span>
         </a>

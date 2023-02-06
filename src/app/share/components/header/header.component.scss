@@ -29,10 +29,11 @@
     z-index: 999;
 
     &-min {
-        transition: height 0.15s ease-out;
         --image-size: 50px;
         --contact-me-margin-top: 0;
-
+        --image-margin-right: 1.5rem;
+        
+        transition: height 0.15s ease-out;
         padding: .75rem 0;
         height: 75px;
     }
