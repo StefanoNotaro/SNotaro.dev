@@ -1,8 +1,8 @@
 <div #header class="header" [ngClass]="{ 'header-min': minHeader }">
     <div class="container clearfix" [ngClass]="{ 'd-flex align-items-center': minHeader }">
-        <img src="/assets/profile-photo.jpg" alt="Profile picture" class="profile-image"
+        <img src="/assets/profile-photo.jpg" alt="Profile picture" class="profile-image" [ngClass]="{ 'profile-image-min': minHeader }"
             priority>
-        <div class="profile-content" [ngClass]="{ 'ms-auto': minHeader }">
+        <div class="profile-content" [ngClass]="{ 'ms-auto profile-content-min': minHeader }">
             <h1 [ngClass]="{ 'd-none': minHeader }">Stefano Notaro Francesco</h1>
             <h3 [ngClass]="{ 'd-none': minHeader }">Fullstack Developer</h3>
             <ul class="list-group list-group-numbered list-group-horizontal gap-3">

@@ -17,6 +17,7 @@
 }
 
 .header {
+    transition: height 0.15s ease-in;
     text-align: var(--container-text-align);
 
     background-color: var(--app-surface);
@@ -28,6 +29,7 @@
     z-index: 999;
 
     &-min {
+        transition: height 0.15s ease-out;
         --image-size: 50px;
         --contact-me-margin-top: 0;
 
@@ -45,6 +47,10 @@
         margin-right: var(--image-margin-right);
         height: var(--image-size);
         width: var(--image-size);
+
+        &-min {
+            --image-margin-left: 0;
+        }
     }
 
     &-content {
@@ -62,6 +68,10 @@
         ul {
             justify-content: var(--content-justify-content);
             margin-bottom: var(--content-list-margin-bottom);
+        }
+
+        &-min {
+            --content-list-margin-bottom: 0;
         }
     }
 

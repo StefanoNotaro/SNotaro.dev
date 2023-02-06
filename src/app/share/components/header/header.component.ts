@@ -60,6 +60,8 @@ export class HeaderComponent implements AfterContentChecked {
 
     if (previousValue !== this.minHeader) {
       this.changeDetectorRef.detectChanges();
+      const newHeight = this.headerRef.nativeElement.getBoundingClientRect().height;
+      this.headerRef.nativeElement.style.height = this.minHeader ? '' : `${newHeight}px`;
     }
   }
 }
