@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-about-me',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
-
+  public environment = environment;
 }
