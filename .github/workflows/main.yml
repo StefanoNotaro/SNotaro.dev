@@ -19,7 +19,7 @@ jobs:
       uses: jacobtomlinson/gha-find-replace@v2
       with:
         find: "___test___"
-        replace: "$MY_TEST"
+        replace: $MY_TEST
         include: "**secrets.*.ts"
         regex: false
 
