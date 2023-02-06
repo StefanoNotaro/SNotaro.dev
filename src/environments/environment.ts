@@ -1,6 +1,8 @@
 import { coreEnvironment } from './environment.core';
+import { secrets } from './secrets/secrets';
 
 export const environment = {
     production: false,
-    ...coreEnvironment
+    ...coreEnvironment,
+    secrets: { ...secrets }
 }
