@@ -1,0 +1,32 @@
+{
+    "Common": {
+        "Name": "Stefano Notaro Francesco",
+        "ShortName": "Stefano Notaro",
+        "TabTitleSuffix": " | Portfolio",
+        "WorkPosition": "Fullstack Developer",
+        "DesignBy": "Design by {{name}}",
+        "Source": "Source"
+    },
+    "Button": {
+        "ContactMe": "Contact me"
+    },
+    "Accessibility": {
+        "ProfilePicture": "Profile picture"
+    },
+    "AboutMe": {
+        "Title": "About Me",
+        "Paragraph1": "I'm Stefano a Spanish native speaker. That actually work for Infragistics in English.",
+        "Paragraph2": "This is my first time working in another language, this may be challenging at first, but an enjoyable challenge.",
+        "Paragraph3": "",
+        "Paragraph4": "On Infragistics been on the role of full-stack developer, I'm mostly focused on front end task.",
+        "Paragraph5": "Neither way, also contribute on the back end, and doing some tasks on salesforce CRM."
+    },
+    "PersonalInfo": {
+        "MainLabel": "Basic Information",
+        "LocationLabel": "Location:",
+        "LocationValue": "Barcelona, Barcelona, Spain",
+        "EmailLabel": "Email:",
+        "SiteLabel": "Site:",
+        "LinkedinLabel": "Linkedin:"
+    }
+}

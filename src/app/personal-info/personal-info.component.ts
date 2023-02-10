@@ -4,11 +4,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEnvelope, faGlobe, faLocationPin } from '@fortawesome/free-solid-svg-icons';
 import { environment } from '../../environments/environment';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-personal-info',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './personal-info.component.html',
   styleUrls: ['./personal-info.component.scss']
 })

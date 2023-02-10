@@ -1,31 +1,31 @@
-<h2 class="sr-only">Basic Information</h2>
+<h2 class="sr-only">{{ 'PersonalInfo.MainLabel' | translate }}</h2>
 <ul class="list-group list-unstyled gap-2">
     <li class="d-flex gap-2">
         <fa-icon [icon]="faIcons.location"></fa-icon>
-        <span class="sr-only">Location:</span>
+        <span class="sr-only">{{ 'PersonalInfo.LocationLabel' | translate }}</span>
         <a href="https://goo.gl/maps/a7kQdeoqcrV8uysR9" target="_blank" class="text-decoration-none">
-            Barcelona, Barcelona, Spain
+            {{ 'PersonalInfo.LocationValue' | translate }}
         </a>
     </li>
     <li class="d-flex gap-2">
         <fa-icon [icon]="faIcons.email"></fa-icon>
-        <span class="sr-only">Email:</span>
+        <span class="sr-only">{{ 'PersonalInfo.EmailLabel' | translate }}</span>
         <a [href]="'mailto: ' + environment.personalEmail + '?subject=Reaching out from portfolio'" target="_self" class="text-decoration-none">
             {{ environment.personalEmailDisplay }}
         </a>
     </li>
     <li class="d-flex gap-2">
         <fa-icon [icon]="faIcons.link"></fa-icon>
-        <span class="sr-only">Site:</span>
+        <span class="sr-only">{{ 'PersonalInfo.SiteLabel' | translate }}</span>
         <a [href]="pageBaseUrl" target="_self" class="text-decoration-none">
             {{ pageBaseUrl }}
         </a>
     </li>
     <li class="d-flex gap-2">
         <fa-icon [icon]="faIcons.linkedin"></fa-icon>
-        <span class="sr-only">Linkedin:</span>
+        <span class="sr-only">{{ 'PersonalInfo.LinkedinLabel' | translate }}</span>
         <a [href]="environment.linkedinHref" target="_self" class="text-decoration-none">
-            Stefano Notaro Francesco | Linkedin
+            {{ 'Common.Name' | translate }} | Linkedin
         </a>
     </li>
 </ul>

@@ -1,0 +1,32 @@
+{
+    "Common": {
+        "Name": "Stefano Notaro Francesco",
+        "ShortName": "Stefano Notaro",
+        "TabTitleSuffix": " | Portfolio",
+        "WorkPosition": "Fullstack Developer",
+        "DesignBy": "Diseñado por {{name}}",
+        "Source": "Código"
+    },
+    "Button": {
+        "ContactMe": "Contactar"
+    },
+    "Accessibility": {
+        "ProfilePicture": "Imagen de perfil"
+    },
+    "AboutMe": {
+        "Title": "Sobre Mi",
+        "Paragraph1": "Actualmente trabajo para Infragistics.",
+        "Paragraph2": "En este rol de full-stack developer realizo principalmente desarrollos de font-end. Igualmente contribuyo en otras areas como el back-end o mejoras en el CRM de salesforce.",
+        "Paragraph3": "Datos de interes:",
+        "Paragraph4": "Cuanto con diploma de First Certificate (B2) en ingles.",
+        "Paragraph5": "Dentro de los proyectos, he tenido varios desafios, asi como viajar a Finlandia para la integración entre varios sistemas."
+    },
+    "PersonalInfo": {
+        "MainLabel": "Información básica",
+        "LocationLabel": "Localidad:",
+        "LocationValue": "Barcelona, Barcelona, España",
+        "EmailLabel": "Correo electrónico:",
+        "SiteLabel": "Sitio web:",
+        "LinkedinLabel": "Linkedin:"
+    }
+}

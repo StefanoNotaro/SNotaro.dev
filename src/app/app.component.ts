@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { TitleService } from './share/services/title.service';
 
 @Component({
@@ -11,11 +12,14 @@ export class AppComponent implements OnInit {
 
   constructor(
     private titleService: TitleService,
-    private changeDetectorRef: ChangeDetectorRef
+    private changeDetectorRef: ChangeDetectorRef,
+    private translateService: TranslateService
   ) {
+    this.translateService.use(this.translateService.defaultLang);
   }
 
   public ngOnInit(): void {
+    this.translateService.use(this.translateService.defaultLang);
     this.titleService.subscribe();
   }
 

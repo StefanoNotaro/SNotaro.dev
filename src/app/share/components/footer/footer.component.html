@@ -1,9 +1,9 @@
 <footer class="d-flex align-items-center justify-content-center">
     <ul class="list-horizontal">
         <li>{{ currentYear }}</li>
-        <li>Design by Stefano Notaro</li>
+        <li>{{ 'Common.DesignBy' | translate: { name: ('Common.ShortName' | translate) } }}</li>
         <li>
-            <a [href]="environment.githubProjectHref" class="text-decoration-none">Source</a>
+            <a [href]="environment.githubProjectHref" class="text-decoration-none">{{ 'Common.Source' | translate }}</a>
         </li>
     </ul>
 </footer>
