@@ -12,7 +12,7 @@
                 <li *ngFor="let icon of faIcons.socialMedia">
                     <a [href]="icon.href" role="button" target="_blank" (mouseenter)="icon.hover = true"
                         (mouseleave)="icon.hover = false">
-                        <fa-icon [icon]="icon.icon" [classes]="['fa-2x', icon.hover ? 'fa-beat-fade' : '']">
+                        <fa-icon [icon]="icon.icon" [classes]="[!minHeader ? 'fa-2x' : 'fa-xl', icon.hover ? 'fa-beat-fade' : '']">
                         </fa-icon>
                     </a>
                 </li>
