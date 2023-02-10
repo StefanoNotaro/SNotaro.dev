@@ -31,5 +31,8 @@
     },
     "Skills": {
         "Title": "Habilidades"
+    },
+    "WorkExperience": {
+        "Title": "Experiencia Laboral"
     }
 }
