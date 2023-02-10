@@ -13,4 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class AboutMeComponent {
     public environment = environment;
     public String = String;
+    public get yearsAtInfragistics(): number {
+        return new Date().getFullYear() - 2021;
+    }
 }

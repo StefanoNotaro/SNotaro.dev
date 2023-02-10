@@ -1,6 +1,6 @@
 <h3>{{ 'AboutMe.Title' | translate }}</h3>
 <p>{{ 'AboutMe.Paragraph1' | translate }}</p>
-<p>{{ 'AboutMe.Paragraph2' | translate }}</p>
+<p>{{ 'AboutMe.Paragraph2' | translate: { years: yearsAtInfragistics } }}</p>
 <br>
 <h6 *ngIf="!String.isNullOrEmpty('AboutMe.Paragraph3' | translate)">{{ 'AboutMe.Paragraph3' | translate }}</h6>
 <p>{{ 'AboutMe.Paragraph4' | translate }} <br> {{ 'AboutMe.Paragraph5' | translate }}</p>
