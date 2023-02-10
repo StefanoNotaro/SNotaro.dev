@@ -10,7 +10,8 @@
     <li class="d-flex gap-2">
         <fa-icon [icon]="faIcons.email"></fa-icon>
         <span class="sr-only">{{ 'PersonalInfo.EmailLabel' | translate }}</span>
-        <a [href]="'mailto: ' + environment.personalEmail + '?subject=Reaching out from portfolio'" target="_self" class="text-decoration-none">
+        <a [href]="'mailto: ' + environment.personalEmail + '?subject=Reaching out from portfolio'" target="_self"
+            class="text-decoration-none">
             {{ environment.personalEmailDisplay }}
         </a>
     </li>

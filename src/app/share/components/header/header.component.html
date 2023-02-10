@@ -1,8 +1,8 @@
 <div #header class="header" [ngClass]="{ 'header-min': minHeader }">
     <div class="container clearfix" [ngClass]="{ 'd-flex align-items-center': minHeader }">
         <a href="/">
-            <img src="/assets/profile-photo.jpg" [alt]="'Accessibility.ProfilePicture' | translate" class="profile-image"
-                [ngClass]="{ 'profile-image-min': minHeader }" priority>
+            <img src="/assets/profile-photo.jpg" [alt]="'Accessibility.ProfilePicture' | translate"
+                class="profile-image" [ngClass]="{ 'profile-image-min': minHeader }" priority>
         </a>
         <h3 *ngIf="minHeader" class="m-0 me-4 text-truncate">{{ 'Common.Name' | translate }}</h3>
         <div class="profile-content" [ngClass]="{ 'ms-auto profile-content-min': minHeader }">
@@ -12,7 +12,8 @@
                 <li *ngFor="let icon of faIcons.socialMedia">
                     <a [href]="icon.href" role="button" target="_blank" (mouseenter)="icon.hover = true"
                         (mouseleave)="icon.hover = false">
-                        <fa-icon [icon]="icon.icon" [classes]="[!minHeader ? 'fa-2x' : 'fa-xl', icon.hover ? 'fa-beat-fade' : '']">
+                        <fa-icon [icon]="icon.icon"
+                            [classes]="[!minHeader ? 'fa-2x' : 'fa-xl', icon.hover ? 'fa-beat-fade' : '']">
                         </fa-icon>
                     </a>
                 </li>

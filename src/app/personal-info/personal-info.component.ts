@@ -7,19 +7,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { environment } from '@environments/environment';
 
 @Component({
-  selector: 'app-personal-info',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './personal-info.component.html',
-  styleUrls: ['./personal-info.component.scss']
+    selector: 'app-personal-info',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './personal-info.component.html',
+    styleUrls: ['./personal-info.component.scss'],
 })
 export class PersonalInfoComponent {
-  public pageBaseUrl = window.origin;
-  public environment = environment;
-  public faIcons = {
-    location: faLocationPin,
-    email: faEnvelope,
-    link: faGlobe,
-    linkedin: faLinkedin
-  }
+    public pageBaseUrl = window.origin;
+    public environment = environment;
+    public faIcons = {
+        location: faLocationPin,
+        email: faEnvelope,
+        link: faGlobe,
+        linkedin: faLinkedin,
+    };
 }

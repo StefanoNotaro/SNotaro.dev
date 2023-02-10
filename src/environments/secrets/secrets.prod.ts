@@ -1,3 +1,3 @@
 export const secrets = {
-    test: "___test___"
-}
+    test: '___test___',
+};

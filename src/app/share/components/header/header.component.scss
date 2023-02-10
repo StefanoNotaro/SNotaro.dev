@@ -32,9 +32,9 @@
         --image-size: 50px;
         --contact-me-margin-top: 0;
         --image-margin-right: 1.5rem;
-        
+
         transition: height 0.15s ease-out;
-        padding: .75rem 0;
+        padding: 0.75rem 0;
         height: 75px;
     }
 }
@@ -93,7 +93,6 @@
         --contact-me-margin-top: 39.24px;
     }
 }
-
 
 @media (min-width: 992px) {
     :host {

@@ -8,62 +8,61 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, RouterModule, TranslateModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule, RouterModule, TranslateModule],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements AfterContentChecked {
-  public environment = environment;
-  public minHeader = false;
-  private currentHeaderHeight = 0;
+    public environment = environment;
+    public minHeader = false;
+    private currentHeaderHeight = 0;
 
-  @Output() heightChanged = new EventEmitter<number>();
+    @Output() heightChanged = new EventEmitter<number>();
 
-  @ViewChild('header', { static: true }) headerRef!: ElementRef<HTMLDivElement>;
+    @ViewChild('header', { static: true })
+    headerRef!: ElementRef<HTMLDivElement>;
 
-  public faIcons = {
-    paperPlane: faPaperPlane,
-    socialMedia: [
-      {
-        icon: faLinkedin,
-        href: environment.linkedinHref,
-        hover: false,
-      },
-      {
-        icon: faGithub,
-        href: environment.githubHref,
-        hover: false,
-      },
-      {
-        icon: faWhatsapp,
-        href: environment.whatsappHref,
-        hover: false,
-      },
-    ]
-  };
+    public faIcons = {
+        paperPlane: faPaperPlane,
+        socialMedia: [
+            {
+                icon: faLinkedin,
+                href: environment.linkedinHref,
+                hover: false,
+            },
+            {
+                icon: faGithub,
+                href: environment.githubHref,
+                hover: false,
+            },
+            {
+                icon: faWhatsapp,
+                href: environment.whatsappHref,
+                hover: false,
+            },
+        ],
+    };
 
-  constructor(
-    private changeDetectorRef: ChangeDetectorRef
-  ) { }
-  
-  public ngAfterContentChecked(): void {
-    if (this.currentHeaderHeight !== this.headerRef.nativeElement.getBoundingClientRect().height) {
-      this.currentHeaderHeight = this.headerRef.nativeElement.getBoundingClientRect().height;
-      this.heightChanged.emit(this.currentHeaderHeight);
+    constructor(private changeDetectorRef: ChangeDetectorRef) {}
+
+    public ngAfterContentChecked(): void {
+        if (this.currentHeaderHeight !== this.headerRef.nativeElement.getBoundingClientRect().height) {
+            this.currentHeaderHeight = this.headerRef.nativeElement.getBoundingClientRect().height;
+            this.heightChanged.emit(this.currentHeaderHeight);
+        }
     }
-  }
 
-  @HostListener('window:scroll', ['$event'])
-  public handleScroll() {
-    const previousValue = this.minHeader;
-    this.minHeader = window.scrollY > 100;
+    @HostListener('window:scroll', ['$event'])
+    public handleScroll() {
+        const previousValue = this.minHeader;
+        this.minHeader = window.scrollY > 100;
 
-    if (previousValue !== this.minHeader) {
-      this.changeDetectorRef.detectChanges();
-      const newHeight = this.headerRef.nativeElement.getBoundingClientRect().height;
-      this.headerRef.nativeElement.style.height = this.minHeader ? '' : `${newHeight}px`;
+        if (previousValue !== this.minHeader) {
+            this.changeDetectorRef.detectChanges();
+            const newHeight = this.headerRef.nativeElement.getBoundingClientRect().height;
+            this.headerRef.nativeElement.style.height = this.minHeader ? '' : `${newHeight}px`;
+        }
     }
-  }
 }

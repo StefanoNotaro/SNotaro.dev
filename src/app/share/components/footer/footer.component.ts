@@ -4,14 +4,16 @@ import { environment } from '@environments/environment';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+    selector: 'app-footer',
+    standalone: true,
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  public environment = environment;
+    public environment = environment;
 
-  public get currentYear(): number { return new Date().getFullYear(); }
+    public get currentYear(): number {
+        return new Date().getFullYear();
+    }
 }

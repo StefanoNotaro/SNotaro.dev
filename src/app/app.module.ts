@@ -12,51 +12,44 @@ import { FooterComponent } from './share/components/footer/footer.component';
 import { HeaderComponent } from './share/components/header/header.component';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 export class MyMissingTranslationHandler implements MissingTranslationHandler {
-  handle(params: MissingTranslationHandlerParams) {
-    return `___ MissingResource: "${params.key}" ___`;
-  }
+    handle(params: MissingTranslationHandlerParams) {
+        return `___ MissingResource: "${params.key}" ___`;
+    }
 }
 
-export const components = [
-  HeaderComponent,
-  FooterComponent,
-  AboutMeComponent,
-  PersonalInfoComponent,
-];
+export const components = [HeaderComponent, FooterComponent, AboutMeComponent, PersonalInfoComponent];
 
 export const modules = [
-  BrowserModule,
-  AppRoutingModule,
-  HttpClientModule,
-  TranslateModule.forRoot({
-    loader: {
-      provide: TranslateLoader,
-      useFactory: (createTranslateLoader),
-      deps: [HttpClient]
-    },
-    defaultLanguage: getDefaultLanguage(),
-    // missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
-    useDefaultLang: true
-  }),
-]
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: createTranslateLoader,
+            deps: [HttpClient],
+        },
+        defaultLanguage: getDefaultLanguage(),
+        // missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
+        useDefaultLang: true,
+    }),
+];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [modules, components],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [modules, components],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 
 function getDefaultLanguage(): string {
-  const supportedLanguages = ['en', 'es'],
-    browserLanguage = <string>navigator.language.split('-').find(x => x !== undefined) ?? supportedLanguages.find(x => x !== undefined),
-    language = <string>supportedLanguages.find(x => browserLanguage?.indexOf(x) !== -1) ?? supportedLanguages.find(x => x !== undefined);
-  return language;
+    const supportedLanguages = ['en', 'es'],
+        browserLanguage = <string>navigator.language.split('-').find((x) => x !== undefined) ?? supportedLanguages.find((x) => x !== undefined),
+        language = <string>supportedLanguages.find((x) => browserLanguage?.indexOf(x) !== -1) ?? supportedLanguages.find((x) => x !== undefined);
+    return language;
 }
