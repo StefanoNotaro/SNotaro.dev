@@ -1,10 +1,10 @@
-import { AfterContentChecked, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AfterContentChecked, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { environment } from '@environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { RouterModule } from '@angular/router';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

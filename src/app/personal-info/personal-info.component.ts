@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faEnvelope, faGlobe, faLocationPin } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { TranslateModule } from '@ngx-translate/core';
+import { Component } from '@angular/core';
 import { environment } from '@environments/environment';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faGlobe, faLocationPin } from '@fortawesome/free-solid-svg-icons';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-personal-info',

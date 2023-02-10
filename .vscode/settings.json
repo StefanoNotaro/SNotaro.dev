@@ -1,0 +1,11 @@
+{
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "prettier.tabWidth": 4,
+    "editor.detectIndentation": false,
+    // put this in your settings object
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+        "source.sortMembers": true
+    }
+}

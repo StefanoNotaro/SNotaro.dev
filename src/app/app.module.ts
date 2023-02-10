@@ -35,7 +35,7 @@ export const modules = [
             deps: [HttpClient],
         },
         defaultLanguage: getDefaultLanguage(),
-        // missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
+        missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
         useDefaultLang: true,
     }),
 ];
@@ -50,7 +50,19 @@ export class AppModule {}
 
 function getDefaultLanguage(): string {
     const supportedLanguages = ['en', 'es'],
-        browserLanguage = <string>navigator.language.split('-').find((x) => x !== undefined) ?? supportedLanguages.find((x) => x !== undefined),
-        language = <string>supportedLanguages.find((x) => browserLanguage?.indexOf(x) !== -1) ?? supportedLanguages.find((x) => x !== undefined);
+        defaultLanguage = supportedLanguages.find((x) => x !== undefined),
+        languageOverride = document.location.pathname
+            .split('/')
+            ?.filter((x) => !String.isNullOrEmpty(x))
+            ?.find((x) => x !== undefined),
+        browserLanguage = <string>navigator.language.split('-').find((x) => x !== undefined) ?? defaultLanguage,
+        language =
+            <string>supportedLanguages.find((x) => languageOverride?.indexOf(x) !== -1) ??
+            <string>supportedLanguages.find((x) => browserLanguage?.indexOf(x) !== -1) ??
+            defaultLanguage;
+
+    if (supportedLanguages.find((x) => x === languageOverride)) {
+        window.history.replaceState(window.history.state, '', document.location.pathname.replace(`/${languageOverride}`, ''));
+    }
     return language;
 }
