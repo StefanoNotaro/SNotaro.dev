@@ -1,12 +1,13 @@
-<app-header (heightChanged)="onHeaderHeightChanged($event)"></app-header>
+<app-header data-info="app-header" (heightChanged)="onHeaderHeightChanged($event)"></app-header>
 <article class="container" [style.marginTop.rem]="(headerHeight / 15) + 3" [style.marginBottom.rem]="3">
     <div class="row">
         <div class="col-lg-8 col-12 d-flex flex-column gap-4">
-            <app-about-me></app-about-me>
+            <app-about-me data-info="app-about-me"></app-about-me>
         </div>
         <div class="col-lg-4 col-12 mt-5 mt-lg-0 d-flex flex-column gap-4">
-            <app-personal-info></app-personal-info>
+            <app-personal-info data-info="app-personal-info"></app-personal-info>
+            <app-skills data-info="app-skills"></app-skills>
         </div>
     </div>
 </article>
-<app-footer></app-footer>
+<app-footer data-info="app-footer"></app-footer>

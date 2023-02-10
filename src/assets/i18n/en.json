@@ -28,5 +28,8 @@
         "EmailLabel": "Email:",
         "SiteLabel": "Site:",
         "LinkedinLabel": "Linkedin:"
+    },
+    "Skills": {
+        "Title": "Skills"
     }
 }

@@ -3,3 +3,14 @@
     flex-direction: column;
     height: 100%;
 }
+
+[data-info^='app-'] {
+    background-color: var(--app-surface);
+    &:not([data-info='app-footer'], [data-info='app-header']) {
+        display: block;
+        padding: 2rem;
+    }
+    &[data-info='app-footer'] {
+        margin-top: auto;
+    }
+}

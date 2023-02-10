@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { FooterComponent } from './share/components/footer/footer.component';
 import { HeaderComponent } from './share/components/header/header.component';
+import { SkillsComponent } from './skills/skills.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,7 +22,7 @@ export class MyMissingTranslationHandler implements MissingTranslationHandler {
     }
 }
 
-export const components = [HeaderComponent, FooterComponent, AboutMeComponent, PersonalInfoComponent];
+export const components = [HeaderComponent, FooterComponent, AboutMeComponent, PersonalInfoComponent, SkillsComponent];
 
 export const modules = [
     BrowserModule,
