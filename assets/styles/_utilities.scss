@@ -2,10 +2,10 @@ ul.list-horizontal {
     list-style-type: none;
     display: flex;
 
-    &>li {
+    & > li {
         &::before {
             content: '•';
-            margin: 0 .5rem;
+            margin: 0 0.5rem;
         }
 
         &:first-child::before {
